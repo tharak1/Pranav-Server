@@ -30,6 +30,7 @@ const getRecipie = asyncHandler(async(req,res)=>{
 
 const getRecipies = asyncHandler(async(req,res)=>{
         const rec = await Recipe.find();
+        // console.log(rec);
         if(rec){
             res.status(200).json({message:"success",rec});
         }
